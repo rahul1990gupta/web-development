@@ -1,0 +1,31 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f0e9e9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between; /* Update this line */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+}
