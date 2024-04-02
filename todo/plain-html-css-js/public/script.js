@@ -10,6 +10,9 @@ async function fetchTasks() {
     try {
       const response = await fetch('http://localhost:3000/tasks');
       const todoListValue = await response.json();
+      if (todoListValue.redirect) {
+        window.location.href = todoListValue.redirect;
+      }
       console.log(todoListValue);
   
       for (let i = 0; i < todoListValue.length; i++) {
@@ -82,7 +85,7 @@ function addItem() {
     // Create a new list item element
     const newItem = document.createElement('li');
     newItem.innerHTML = `
-    <span>${todoListValue[i].name}</span>
+    <span>${newItemText}</span>
     <a href="#" class="edit-link">Edit</a>
     <a href="#" class="delete-link">Delete</a>
     <a href="#" class="complete-link">Mark Complete</a>`;
@@ -104,7 +107,10 @@ function addItem() {
         }),
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+          console.log(data)
+        }
+    )
     .catch((error) => console.error('Error:', error));
 
 }
