@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tasks
   get 'portfolio/about_me'
   get 'portfolio/projects'
   get 'portfolio/contact'
