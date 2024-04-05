@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'weather/index'
   resources :tasks
   get 'portfolio/about_me'
   get 'portfolio/projects'

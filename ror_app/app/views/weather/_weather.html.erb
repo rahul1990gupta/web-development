@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <h2>Weather Information</h2>
+    <p>Temperature <i class="bi bi-thermometer-half"></i>: 
+        <%= @weather_data['main']['temp'] %> 
+    </p>
+    
+    <p>Humidity <i class="bi bi-droplet"></i>: 
+        <%= @weather_data['main']['humidity'] %> 
+    </p>
+    
+    <p>Condition <img src="http://openweathermap.org/img/w/<%= @weather_data['weather'][0]['icon'] %>.png">: 
+        <%= @weather_data['weather'][0]['description'] %> 
+    </p>
+  
+</div>
