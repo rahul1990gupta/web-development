@@ -1,0 +1,16 @@
+
+.project-item img {
+    width: 100%;
+    height: auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
